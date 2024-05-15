@@ -13,8 +13,9 @@ class MainTabController: UITabBarController {
 	let actionButton: UIButton = {
 		let button = UIButton(type: .system)
 		button.tintColor = .white
-		button.backgroundColor = .blue
+		button.backgroundColor = .twitterBlue
 		button.setImage(UIImage(named: "new_tweet"), for: .normal)
+		button.addTarget(MainTabController.self, action: #selector(actionButtonTapped), for: .touchUpInside)
 		return button
 	}()
 	
@@ -101,6 +102,10 @@ class MainTabController: UITabBarController {
 		)
 		
 		actionButton.layer.cornerRadius = 56 / 2
+	}
+	
+	@objc func actionButtonTapped() {
+		
 	}
 }
 

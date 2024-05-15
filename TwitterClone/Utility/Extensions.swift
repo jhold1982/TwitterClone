@@ -59,13 +59,13 @@ extension UIView {
 	func centerX(
 		inView view: UIView,
 		topAnchor: NSLayoutYAxisAnchor? = nil,
-		paddingTop: CGFloat? = nil
+		paddingTop: CGFloat? = 0
 	) {
 		translatesAutoresizingMaskIntoConstraints = false
 		centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 		
-		if let topAnchor = topAnchor, let padding = paddingTop {
-			self.topAnchor.constraint(equalTo: topAnchor, constant: padding).isActive = true
+		if let topAnchor = topAnchor {
+			self.topAnchor.constraint(equalTo: topAnchor, constant: paddingTop!).isActive = true
 		}
 	}
 	
@@ -115,7 +115,7 @@ extension UIColor {
 		)
 	}
 	
-	static let mainBlue = UIColor.rgb(red: 29, green: 161, blue: 242)
+	static let twitterBlue = UIColor.rgb(red: 29, green: 161, blue: 242)
 	static let customRed = UIColor.rgb(red: 220, green: 78, blue: 65)
 	static let customPurple = UIColor.rgb(red: 128, green: 87, blue: 194)
 }

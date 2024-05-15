@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6414E8752BEEB10800B5AAF7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6414E8742BEEB10800B5AAF7 /* LoginController.swift */; };
 		6415486B2BEA9CC20007DD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415486A2BEA9CC20007DD72 /* AppDelegate.swift */; };
 		6415486D2BEA9CC20007DD72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415486C2BEA9CC20007DD72 /* SceneDelegate.swift */; };
 		6415486F2BEA9CC20007DD72 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415486E2BEA9CC20007DD72 /* MainTabController.swift */; };
@@ -18,9 +19,12 @@
 		6415488B2BEAA0360007DD72 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415488A2BEAA0360007DD72 /* NotificationsController.swift */; };
 		6415488D2BEAA03D0007DD72 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415488C2BEAA03D0007DD72 /* ConversationsController.swift */; };
 		6415488F2BEAC6FE0007DD72 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6415488E2BEAC6FE0007DD72 /* Extensions.swift */; };
+		64A3A0852BF3EA1A00317B28 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A3A0842BF3EA1A00317B28 /* RegistrationController.swift */; };
+		64F0EE952BF5348200B2C4B9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F0EE942BF5348200B2C4B9 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6414E8742BEEB10800B5AAF7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		641548672BEA9CC20007DD72 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6415486A2BEA9CC20007DD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6415486C2BEA9CC20007DD72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		6415488A2BEAA0360007DD72 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		6415488C2BEAA03D0007DD72 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		6415488E2BEAC6FE0007DD72 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		64A3A0842BF3EA1A00317B28 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		64F0EE942BF5348200B2C4B9 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6414E8732BEEB0EE00B5AAF7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				6414E8742BEEB10800B5AAF7 /* LoginController.swift */,
+				64A3A0842BF3EA1A00317B28 /* RegistrationController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		6415485E2BEA9CC20007DD72 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				6415488E2BEAC6FE0007DD72 /* Extensions.swift */,
+				64F0EE942BF5348200B2C4B9 /* Utilities.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -100,6 +116,7 @@
 		641548822BEA9D010007DD72 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6414E8732BEEB0EE00B5AAF7 /* Authentication */,
 				6415486E2BEA9CC20007DD72 /* MainTabController.swift */,
 				641548862BEA9F690007DD72 /* FeedController.swift */,
 				641548882BEAA02A0007DD72 /* ExploreController.swift */,
@@ -203,11 +220,14 @@
 			files = (
 				6415488B2BEAA0360007DD72 /* NotificationsController.swift in Sources */,
 				6415488D2BEAA03D0007DD72 /* ConversationsController.swift in Sources */,
+				64F0EE952BF5348200B2C4B9 /* Utilities.swift in Sources */,
 				6415486F2BEA9CC20007DD72 /* MainTabController.swift in Sources */,
 				6415488F2BEAC6FE0007DD72 /* Extensions.swift in Sources */,
+				6414E8752BEEB10800B5AAF7 /* LoginController.swift in Sources */,
 				641548892BEAA02A0007DD72 /* ExploreController.swift in Sources */,
 				6415486B2BEA9CC20007DD72 /* AppDelegate.swift in Sources */,
 				6415486D2BEA9CC20007DD72 /* SceneDelegate.swift in Sources */,
+				64A3A0852BF3EA1A00317B28 /* RegistrationController.swift in Sources */,
 				641548872BEA9F690007DD72 /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
