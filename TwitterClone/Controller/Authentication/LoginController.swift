@@ -87,7 +87,7 @@ class LoginController: UIViewController {
 		view.addSubview(logoImageView)
 		logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
 		
-		logoImageView.setDimension(width: 150, height: 150)
+		logoImageView.setDimensions(width: 150, height: 150)
 		
 		let stack = UIStackView(
 			arrangedSubviews: [
@@ -96,6 +96,7 @@ class LoginController: UIViewController {
 				loginButton
 			]
 		)
+		
 		stack.axis = .vertical
 		stack.spacing = 20
 		stack.distribution = .fillEqually

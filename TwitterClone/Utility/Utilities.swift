@@ -22,7 +22,7 @@ class Utilities {
 		
 		view.addSubview(imageView)
 		imageView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, paddingLeft: 8, paddingBottom: 8)
-		imageView.setDimension(width: 24, height: 24)
+		imageView.setDimensions(width: 24, height: 24)
 		
 		view.addSubview(textField)
 		textField.anchor(
