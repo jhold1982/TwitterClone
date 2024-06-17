@@ -7,12 +7,14 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class RegistrationController: UIViewController {
 	
 	// MARK: - Properties
 	
 	private let imagePicker = UIImagePickerController()
+	private var profileImage: UIImage?
 	
 	// Plus Photo Button + Image
 	private let plusPhotoButton: UIButton = {
@@ -169,7 +171,31 @@ class RegistrationController: UIViewController {
 	}
 	
 	@objc func handleSignUp() {
+		guard let profileImage = profileImage else {
+			print("DEBUG: Please select a profile image...")
+			return
+		}
+		guard let email = emailTextField.text else { return }
+		guard let password = passwordTextField.text else { return }
+		guard let fullname = fullNameTextField.text else { return }
+		guard let username = usernameTextField.text else { return }
 		
+		Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+			if let error = error {
+				print("DEBUG: Error - \(error.localizedDescription)")
+				return
+			}
+			
+			guard let uid = result?.user.uid else { return }
+			
+			let values = ["email": email, "username": username, "fullname": fullname]
+			
+			let refDat = Database.database().reference().child("users").child(uid)
+			
+			refDat.updateChildValues(values) { (error, ref) in
+				print("DEBUG: Successfully updated user info...")
+			}
+		}
 	}
 }
 
@@ -181,6 +207,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
 		didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
 	) {
 		guard let profileImage = info[.editedImage] as? UIImage else { return }
+		self.profileImage = profileImage
 		
 		// Rounds off photo
 		plusPhotoButton.layer.cornerRadius = 128 / 2
